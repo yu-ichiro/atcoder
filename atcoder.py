@@ -1,6 +1,7 @@
 import json
 import os
 import sys
+from functools import partial
 from io import StringIO, TextIOWrapper
 from multiprocessing import Process, Manager
 from tempfile import NamedTemporaryFile, TemporaryDirectory
@@ -165,3 +166,6 @@ def run_interactive(case_func, func):
     os.unlink(g.file_b)
     log_file.close()
     tempdir.cleanup()
+
+
+debug = partial(print, file=sys.__stdout__)
