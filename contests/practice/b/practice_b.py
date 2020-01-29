@@ -1,6 +1,6 @@
 import random
 
-from atcoder import run_interactive, wait_input as input  # noqa
+from atcoder import run_interactive
 
 
 def program():
